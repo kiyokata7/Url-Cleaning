@@ -15,7 +15,7 @@ with open('url.txt', 'r', errors='ignore') as file:
                 current_domain = url.split('/')[2].strip()
 
                 if current_domain in lastDomain:
-                    pass
+                    continue  # Skip saving to output file
                 else:
                     lastDomain.add(current_domain)
 
